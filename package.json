@@ -1,0 +1,21 @@
+{
+  "name": "node_base_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "export NODE_ENV=local&&node --max-old-space-size=4096 server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.3"
+  }
+}
