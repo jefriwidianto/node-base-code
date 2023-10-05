@@ -10,7 +10,7 @@
         const app = express();
         app.enable('trust proxy')
         const http = require('http').Server(app);
-        const connectMongo = require('./services/MongoDB/mongo');
+        const connectMongo = require('./Services/MongoDB/mongo');
 
         app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
         app.use(bodyParser.json({ limit: '50mb' }));
