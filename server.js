@@ -10,7 +10,7 @@
         const app = express();
         app.enable('trust proxy')
         const http = require('http').Server(app);
-        const connectMongo = require('./Services/MongoDB/mongo');
+        // const connectMongo = require('./Services/MongoDB/mongo');
 
         app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
         app.use(bodyParser.json({ limit: '50mb' }));
@@ -19,10 +19,10 @@
         app.use(compression({ level: 9 }));
         app.use(cors());
 
-        let conMongo = await connectMongo.connectMongo();
+        // let conMongo = await connectMongo.connectMongo();
         global.rootPath = __dirname;
         global.$hostPath = process.env.HOST_PATH;
-        console.log(conMongo);
+        // console.log(conMongo);
 
         app.use('/tested', require('./src/tested'));
 
