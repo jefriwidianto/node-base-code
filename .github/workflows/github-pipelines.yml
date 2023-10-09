@@ -27,9 +27,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - uses: mr-smithers-excellent/docker-build-push@v6
       - name: Build & Push Docker Images
-      - with:
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
           - image: ${{ secrets.IMAGES }}
           - registry: docker.io
           - username: ${{ secrets.DOCKER_USERNAME }}
